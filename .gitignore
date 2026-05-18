@@ -1,0 +1,7 @@
+checkpoint/
+datasets/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.tar.gz
