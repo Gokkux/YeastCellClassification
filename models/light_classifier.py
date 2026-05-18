@@ -471,13 +471,7 @@ def build_model(cfg):
     """
     根据配置构建 CellClassifier 模型。
     """
-    #model = CellClassifier(cfg)
-    #model = build_yeastnet_small(num_classes=cfg.model.num_classes)
-    #model = build_yeast_next_tiny(num_classes=cfg.model.num_classes)
-    #model = build_multimodal_yeastnet(num_classes=cfg.model.num_classes)
     model = build_deep_fusion_yeastnet(num_classes=cfg.model.num_classes)
-    #model = build_hierarchical_fusion_net(num_classes=cfg.model.num_classes)
-    #model = build_FGCA_yeastnet(num_classes=cfg.model.num_classes)
     print(model)
     total_params = sum(p.numel() for p in model.parameters())
     print(f"YeastNet total parameters: {total_params:,}")
